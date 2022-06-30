@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>おみくじ</title>
+</head>
+<body>
+
+<!-- ここにJavaScriptを記述する -->
+<script>
+// ---- 実現したい処理 ----
+// o ページを開く
+// o 大吉・吉・小吉・凶 をランダムに選ぶ 
+// o   - 1~4までの数字をランダムに生成する
+// o   - 1~4の数字に応じて大吉・中吉・小吉・凶 を割り振る
+// o おみくじの結果がalert画面に表示される
+
+const randomNum = Math.ceil(Math.random() * 4);
+
+if(randomNum == 1){
+    alert('大吉');
+}else if(randomNum == 2){
+    alert('中吉');
+}else if(randomNum == 3){
+    alert('小吉');
+}else {
+    alert('凶');
+}
+
+</script>
+</body>
+</html>

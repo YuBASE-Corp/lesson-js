@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="js">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-04 | Math Object</title>
+</head>
+<body>
+
+<script>
+let result
+// num の値を変えてみよう
+let num = 1
+
+if(num === 1){
+    result = 'りんご'
+}else{
+    result = 'ぶどう'
+}
+
+// if(num === 1){
+//   console.log('りんご')
+// }else if(num === 2){
+//   console.log('バナナ')
+// }else{
+//   console.log('ぶどう')
+// }
+
+$('.result').text(result)
+$('.result-num').text(num)
+
+
+// --------------------------
+// 真偽型
+// --------------------------
+
+num = 1
+console.log(num === 1) // true
+console.log(num === 2) // false
+
+// --------------------------
+// 色々な条件式
+// --------------------------
+
+num = 2
+console.log(num === 2) // true 等しい
+console.log(num !== 2) // false 等しくない
+console.log(num < 2) // false より大きい
+console.log(num <= 2) // true 以上
+console.log(num === 2 && num === 3) // false AかつB
+console.log(num === 2 || num === 3) // true AまたはB
+</script>
+</body>
+</html>
