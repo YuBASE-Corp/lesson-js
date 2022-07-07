@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
+    <title>課題: クイズゲーム</title>
+</head>
+<body>
+    <header>
+        <h1>クイズゲーム</h1>
+    </header>
+    <main>
+        <div class="container">
+
+            <!-- 問題表示画面 -->
+            <div class="screen">
+                <div class="question-selector">
+                    <!-- 問題番号選択 -->
+                    <select name="questions" id="question-index">
+                        <option value="0">問題</option>
+                    </select>
+                    <button id="button">問題を表示</button>
+                </div>
+
+                <p id="question-text">問題文を表示</p>
+                <ul id="question-selects">
+                    <input type="radio" name="answer" value="0"><span id="ans0">選択肢１</span>
+                    <input type="radio" name="answer" value="1"><span id="ans1">選択肢２</span>
+                    <input type="radio" name="answer" value="2"><span id="ans2">選択肢３</span>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

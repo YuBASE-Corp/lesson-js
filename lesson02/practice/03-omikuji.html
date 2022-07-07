@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p><button id="button">おみくじを引く</button></p>
+        <p>結果は<span id="result"></span>です</p>
+    </div>
+<script>
+// DOM要素を取得
+const button = document.querySelector("#button");
+const result = document.querySelector("#result");
+
+// 課題: おみくじアプリを配列を使って書き換えてみよう
+button.addEventListener("click", function () {
+    // 0, 1, 2, 3, 4 のいずれかがランダムに出力される
+    // Math.floor() ... 小数点切り捨て
+    const randomNum = Math.floor(Math.random() * 5);
+    if(randomNum === 0){
+        result.innerText = "大吉";
+    }else if(randomNum == 1){
+        result.innerText = "中吉";
+    }else if(randomNum == 2){
+        result.innerText = "小吉";
+    }else if(randomNum == 3) {
+        result.innerText = "吉";
+    }else if(randomNum == 4) {
+        result.innerText = "凶";
+    }
+})
+</script>
+</body>
+</html>
+

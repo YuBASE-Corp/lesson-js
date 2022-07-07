@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+/* ---------------------------
+** general
+** -------------------------*/
+
+:root {
+    --primary-color: #E70026;
+    --secondary-color: #E8B417;
+    --light-color: #F8F5F2;
+    --dark-color: #000B29;
+}
+
+body {
+    color: var(--dark-color);
+    background-color: var(--light-color);
+}
+
+ul {
+    padding-left: 0;
+}
+
+
+/* ---------------------------
+** header
+** -------------------------*/
+
+header {
+    height: 50px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+header h1 {
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+/* ---------------------------
+** main
+** -------------------------*/
+
+.question-selector {
+    text-align: center;
+    padding: 12px;
+}
+
+#question-text {
+    text-align: center;
+}
+
+#question-selects {
+    text-align: center;
+}
