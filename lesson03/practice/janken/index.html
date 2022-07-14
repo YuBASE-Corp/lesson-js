@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
+    <title>課題: じゃんけんゲーム</title>
+</head>
+<body>
+    <header>
+        <h1>じゃんけんゲーム</h1>
+    </header>
+    <main>
+
+        <div class="container">
+            <!-- 結果表示画面 -->
+            <div class="screen">
+                <div>
+                    <p>相手の手は</p>
+                    <p id="cpu">計算中...</p>
+                </div>
+
+            </div>
+            <!-- 結果表示画面 -->
+            <ul class="controller">
+                <li id="rock">グー</li>
+                <li id="scissors">チョキ</li>
+                <li id="paper">パー</li>
+            </ul>
+        </div>
+    </main>
+</body>
+<script>
+// グー: 0, チョキ: 1, パー: 2  とします
+// 関数化してみよう！
+// (追加) 配列やオブジェクトを活用して情報をまとめてみよう！
+
+// グーのボタンがクリックされたら実行する
+document.querySelector('#rock').addEventListener('click', function(){
+  const myHand = 0; // グーを設定
+  const pcHand = Math.floor(Math.random() * 3); // コンピュータの手を計算
+
+  // コンピュータの手を表示
+  if (pcHand === 0) {
+    document.querySelector('#cpu').innerText = 'グー';
+  } else if (pcHand === 1) {
+    document.querySelector('#cpu').innerText = 'チョキ';
+  } else if (pcHand === 2) {
+    document.querySelector('#cpu').innerText = 'パー';
+  }
+
+  // じゃんけんの結果を表示
+  const resultNum = (myHand - pcHand + 3) % 3; // 0: あいこ, 1: 負け, 2: 勝ち
+  if (resultNum === 0) {
+    alert('あいこ');
+  } else if (resultNum === 1) {
+    alert('負け');
+  } else if (resultNum === 2) {
+    alert('勝ち');
+  }
+});
+
+// チョキのボタンがクリックされたら実行する
+document.querySelector('#scissors').addEventListener('click', function(){
+  const myHand = 1; // チョキを設定
+  const pcHand = Math.floor(Math.random() * 3); // コンピュータの手を計算
+
+  // コンピュータの手を表示
+  if (pcHand === 0) {
+    document.querySelector('#cpu').innerText = 'グー';
+  } else if (pcHand === 1) {
+    document.querySelector('#cpu').innerText = 'チョキ';
+  } else if (pcHand === 2) {
+    document.querySelector('#cpu').innerText = 'パー';
+  }
+
+  // じゃんけんの結果を表示
+  const resultNum = (myHand - pcHand + 3) % 3; // 0: あいこ, 1: 勝ち, 2: 負け
+  if (resultNum === 0) {
+    alert('あいこ');
+  } else if (resultNum === 1) {
+    alert('負け');
+  } else if (resultNum === 2) {
+    alert('勝ち');
+  }
+});
+
+// パーのボタンがクリックされたら実行する
+document.querySelector('#paper').addEventListener('click', function(){
+  const myHand = 2; // パーを設定
+  const pcHand = Math.floor(Math.random() * 3); // コンピュータの手を計算
+
+  // コンピュータの手を表示
+  if (pcHand === 0) {
+    document.querySelector('#cpu').innerText = 'グー';
+  } else if (pcHand === 1) {
+    document.querySelector('#cpu').innerText = 'チョキ';
+  } else if (pcHand === 2) {
+    document.querySelector('#cpu').innerText = 'パー';
+  }
+
+  // じゃんけんの結果を表示
+  const resultNum = (myHand - pcHand + 3) % 3; // 0: あいこ, 1: 勝ち, 2: 負け
+  if (resultNum === 0) {
+    alert('あいこ');
+  } else if (resultNum === 1) {
+    alert('負け');
+  } else if (resultNum === 2) {
+    alert('勝ち');
+  }
+});
+
+
+
+
+</script>
+</html>
