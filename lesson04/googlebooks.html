@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/bulma.min.css">
+  <title>本検索システム</title>
+</head>
+<body>
+  <main class="container">
+    <section class="section">
+      <h1 class="title">Google Books API</h1>
+      <div class="control mb-4">
+        <div class="field">
+          <input id="keyword" class="input" type="text" placeholder="キーワードを入力">
+        </div>
+        <div class="field">
+          <button id="search" class="button is-primary">検索</button>
+        </div>
+      </div>
+      <ul id="list"></ul>
+    </section>
+  </main>
+
+<!-- axios モジュール読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+// 手順
+// 1. axios を使って 情報を取得する
+// 2. JSONデータ構造を基に本のタイトルを取得する
+// 3. 本のタイトル情報をHTMLに出力する
+// ---ここからは課題！
+// 4. id="keyword"の入力値を取得してキーワード検索できるようにする
+// 5. 作者名を表示する
+
+const button = document.querySelector('#search')
+button.addEventListener('click', () => {
+  alert('click!');
+  // axiosを使って情報を取得する
+  
+})
+
+
+
+
+
+
+</script>
+</body>
+</html>
