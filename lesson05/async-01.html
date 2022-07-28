@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+// ---------------------------
+// 非同期通信の例
+// ---------------------------
+
+// 0~2秒後にメッセージの内容を表示してくれる
+function logMessage (msg) {
+    const ms = Math.floor(Math.random() * 2000);
+    setTimeout(function () {
+        console.log(msg);
+    }, ms)
+}
+
+logMessage('おはよう');
+logMessage('こんにちは');
+logMessage('こんばんは');
+
+</script>
+</body>
+</html>

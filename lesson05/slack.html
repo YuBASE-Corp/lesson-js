@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <title>送信ボタン</title>
+</head>
+<body>
+    <section class="section">
+        <h1 class="title">Slack Incoming Webhook</h1>
+        <div class="field is-grouped">
+            <p class="control is-expanded">
+                <input id="text" class="input" type="text" placeholder="Slackに投稿したい文章を入力">
+            </p>
+            <p class="control">
+                <a id="send" class="button is-info">
+                    送信する
+                </a>
+            </p>
+        </div>
+    </section>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+// Slace Incoming Webhook API URL
+const SLACK_URL = 'https://hooks.slack.com/services/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';
+
+// Slack API に送る場合、これをつける必要がある
+const config = {
+    transformRequest: [(data, headers) => {
+        delete headers.post["Content-Type"];
+        return data;
+    }]
+};
+
+$('#send').on('click', function () { // #send 要素がクリックされたらイベント実行
+    const text = $('#text').val() // #text 要素の中身を取得
+    // 以下に本文を記述
+})
+
+</script>
+
+</body>
+</html>

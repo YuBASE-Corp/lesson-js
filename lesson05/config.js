@@ -1,0 +1,1 @@
+const SLACK_URL = 'https://hooks.slack.com/services/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';
